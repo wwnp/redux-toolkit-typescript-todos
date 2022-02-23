@@ -7,12 +7,12 @@ interface ITodoSingle {
 }
 
 interface IState {
-  todos: ITodoSingle[] | [],
-  'test': string,
+  todos: ITodoSingle[] | []
+  isActive: boolean
 }
 const initialState: IState = {
   todos: [],
-  'test': 'sex',
+  isActive: false
 }
 
 const todoSlice = createSlice({
@@ -20,8 +20,7 @@ const todoSlice = createSlice({
   initialState,
   reducers: {
     removeHandle(state, action) {
-      console.log(action.payload)
-      state.todos = state.todos.filter(todo =>  todo.id !== action.payload)
+      state.todos = state.todos.filter(todo => todo.id !== action.payload)
     },
     handleTodos(state: any, action) {
       state.todos.push({
@@ -32,11 +31,15 @@ const todoSlice = createSlice({
     },
     completeHandle(state, action) {
       const neededTodo = state.todos.find(todo => todo.id === action.payload)
-      if(neededTodo){
+      if (neededTodo) {
         neededTodo.completed = !neededTodo.completed
       }
     },
+    changeMode(state) {
+      state.isActive = !state.isActive
+    },
+
   }
 })
-export const { removeHandle, handleTodos, completeHandle } = todoSlice.actions
+export const { removeHandle, handleTodos, completeHandle,changeMode } = todoSlice.actions
 export default todoSlice.reducer

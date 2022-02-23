@@ -1,4 +1,4 @@
-const Form = ({ value, placeholder, handleInputChange, handleButtonClick }: any) => {
+const Form = ({ value, placeholder, handleInputChange, handleButtonClick, handleCheckedClick }: any) => {
   return (
     <label>
       <input
@@ -7,6 +7,13 @@ const Form = ({ value, placeholder, handleInputChange, handleButtonClick }: any)
         onChange={e => handleInputChange(e.target.value)}
       />
       <button onClick={handleButtonClick}>Add todo</button>
+      <input
+        type="checkbox"
+        name="active"
+        id="ActiveTask"
+        onClick={handleCheckedClick}
+      />
+      <label htmlFor="ActiveTask">Active Tasks</label>
     </label>
   );
 };
