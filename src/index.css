@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* .ul-todo li {
+  vertical-align: middle;
+  display: table-cell;
+} */
+
+/* li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.li-todo {
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: auto;
+} */
+
+ul {
+  list-style-type: none;
+  width: 100%;
+  border: 0 solid silver;
+  border-width: 0 0 1px 1px;
+  padding: 0;
+}
+li {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr;
+  
+  border: 0 solid silver;
+  border-width: 1px 1px 0 0;
+  padding:.5em;
+  transition: background ease-in-out .02s;
+}
+li:hover {
+  background-color: #f8f4f4;
+}
+
+.react-icon {
+  color: initial;
+  cursor: pointer;
+  transition: color ease-in-out .1s;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.red-hover:hover {
+  color: red;
+}
