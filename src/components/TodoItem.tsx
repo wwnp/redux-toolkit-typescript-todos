@@ -19,7 +19,7 @@ const TodoItem = ({ id, text, completed }: any) => {
               <MdDoneOutline
                 size={18}
                 className={'react-icon green'}
-                onClick={() => dispatch(completeHandle(id))}
+                onClick={() => dispatch(completeHandle({id}))}
               >
               </MdDoneOutline>
             )
@@ -27,7 +27,7 @@ const TodoItem = ({ id, text, completed }: any) => {
               <MdOutlineRemoveDone
                 size={18}
                 className={'react-icon red'}
-                onClick={() => dispatch(completeHandle(id))}
+                onClick={() => dispatch(completeHandle({id}))}
               >
               </MdOutlineRemoveDone>
             )
@@ -40,7 +40,7 @@ const TodoItem = ({ id, text, completed }: any) => {
         style={{
           marginLeft: '1rem'
         }}
-        onClick={() => dispatch(removeHandle(id))}
+        onClick={() => dispatch(removeHandle({id}))}
       >
       </CgCloseO>
     </li>

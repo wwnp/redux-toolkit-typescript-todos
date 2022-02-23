@@ -14,7 +14,7 @@ function App() {
         value={text}
         placeholder={'Enter new todo'}
         handleInputChange={setText}
-        handleButtonClick={() => dispatch(handleTodos(text))}
+        handleButtonClick={() => dispatch(handleTodos({text}))}
         handleCheckedClick={() => dispatch(changeMode())}
       >
       </Form>
