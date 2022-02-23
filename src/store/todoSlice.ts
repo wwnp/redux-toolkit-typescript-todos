@@ -37,9 +37,8 @@ const todoSlice = createSlice({
     },
     changeMode(state) {
       state.isActive = !state.isActive
-    },
-
+    }
   }
 })
-export const { removeHandle, handleTodos, completeHandle,changeMode } = todoSlice.actions
-export default todoSlice.reducer
+export const { removeHandle, handleTodos, completeHandle, changeMode } = todoSlice.actions // go to needed files
+export default todoSlice.reducer // go to index.ts

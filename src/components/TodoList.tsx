@@ -3,10 +3,6 @@ import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import { RootState } from 'store';
 import { useEffect, useState } from 'react';
 
-// interface ITodoProps {
-//   todos:number[]
-//   children: any
-// }
 const TodoList = () => {
   const todos = useSelector((state: RootState) => state.todos.todos)
   const isActive = useSelector((state: RootState) => state.todos.isActive)

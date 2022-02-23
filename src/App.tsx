@@ -1,8 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { CgCloseO } from 'react-icons/cg'
-import { MdDoneOutline, MdOutlineRemoveDone } from 'react-icons/md'
-import { useEffect } from 'react';
 import TodoList from './components/TodoList';
 import Form from 'components/Form';
 import { useDispatch } from 'react-redux';

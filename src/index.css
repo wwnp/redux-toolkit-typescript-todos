@@ -14,22 +14,6 @@ code {
     monospace;
 }
 
-/* .ul-todo li {
-  vertical-align: middle;
-  display: table-cell;
-} */
-
-/* li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-}
-.li-todo {
-  padding: 5px;
-  border: 1px solid #ccc;
-  width: auto;
-} */
 
 ul {
   list-style-type: none;
