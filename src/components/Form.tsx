@@ -1,4 +1,5 @@
 const Form = ({ value, placeholder, handleInputChange, handleButtonClick, handleCheckedClick }: any) => {
+  
   return (
     <label>
       <input

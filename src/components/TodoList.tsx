@@ -3,13 +3,12 @@ import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import { RootState } from 'store';
 import { useEffect, useState } from 'react';
 
-const TodoList = () => {
+const TodoList = (props:any) => {
+  const {isDone} = props
   const todos = useSelector((state: RootState) => state.todos.todos)
   const isActive = useSelector((state: RootState) => state.todos.isActive)
 
   const [modTodos, setModTodos] = useState(todos)
-  const [isDone, setIsDone] = useState(false)
-  console.log(isActive)
 
   useEffect(() => {
     setModTodos(todos)
@@ -17,15 +16,15 @@ const TodoList = () => {
   }, [todos])
 
   useEffect(() => {
-    if (isActive) {
+    if (isDone) {
       const modedTodos = todos.filter(todo => todo.completed === true)
       setModTodos(modedTodos)
     } else {
       setModTodos(todos)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isActive])
-
+  }, [isDone])
+  console.log(isDone)
   return (
     <ul>
       {

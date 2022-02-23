@@ -8,7 +8,6 @@ function App() {
   const dispatch = useDispatch()
 
   const [text, setText] = useState('')
-
   return (
     <div className="App">
       <Form
